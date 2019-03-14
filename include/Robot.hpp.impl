@@ -11,7 +11,7 @@ Robot::~Robot()
   mRobo = NULL;
 }
 
-void Robot::move() const
+void Robot::move(double distance) const
 {
-  mRobo->driveDistance(12, 1.75);
+  mRobo->driveDistance(distance, 1.75);
 }
