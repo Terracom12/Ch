@@ -7,14 +7,18 @@ class Robot {
 public:
   Robot();
 
-  void move();
+  void drive(double distance);
+  void moveto(double x, double y);
+  void turn(double degrees);
 
   virtual ~Robot();
 private:
   CLinkbotI *mRobo;
+  double mX, mY;
+  double mAngle
 };
 
 // Defines methods
-#include "Robot.hpp.impl"
+#include "Robot.inl"
 
 #endif /* ROBOT_HPP */

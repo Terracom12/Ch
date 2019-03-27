@@ -1,19 +1,16 @@
-#include <iostream>
 #include "include/Robot.hpp"
 
+char *getInput();
+
 int main(int argc, char const *argv[]) {
+  using namespace std;
   Robot *ro = new Robot();
 
-  ro->move();
+  ro->moveto(12,10);
+  ro->moveto(16,0);
+  ro->moveto(20,16);
+
+  delete ro;
 
   return 0;
-}
-
-char *getInput()
-{
-  using namespace std;
-
-  char characters[8];
-  cout << "Please input 3 characters [A-G]: ";
-  cin >>
 }
