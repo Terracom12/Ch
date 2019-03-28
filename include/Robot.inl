@@ -17,7 +17,10 @@ void Robot::drive(double distance)
   // Actual movement
   mRobo->driveDistance(distance, 1.75);
   // Calculating where the robot currently is:
-  
+  double hypotenuse, opposite, adjacent;
+  double a, b, c; // Angles
+  // Currently known dimensions: hypotonuse (the distance)
+  adjacent=
 }
 
 void Robot::moveto(double x, double y)
