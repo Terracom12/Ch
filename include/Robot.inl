@@ -20,7 +20,7 @@ void Robot::drive(double distance)
   double hypotenuse, opposite, adjacent;
   double a, b, c; // Angles
   // Currently known dimensions: hypotonuse (the distance)
-  adjacent=
+
 }
 
 void Robot::moveto(double x, double y)
@@ -37,6 +37,17 @@ void Robot::moveto(double x, double y)
   turn(angle); // Turn to the correct rotation
   drive(hypotenuse); // Drive the hypotenuse distance
   turn(-angle);
+}
+
+void Robot::shape(Shape shape, double side_length)
+{
+  int i;
+  double angle = (360/shape);
+  for(i = 0; i < shape; i++)
+  {
+    turn(angle);
+    drive(side_length);
+  }
 }
 
 void Robot::turn(double degrees)

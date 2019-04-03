@@ -3,6 +3,18 @@
 
 #include <linkbot.h>
 
+typedef enum {
+  TRIANGLE = 3,
+  SQUARE,
+  PENTAGON,
+  HEXAGON,
+  HEPTAGON,
+  OCTOGON,
+  NONOGON,
+  DECAGON,
+  CIRCLE
+} Shape;
+
 class Robot {
 public:
   Robot();
@@ -11,11 +23,13 @@ public:
   void moveto(double x, double y);
   void turn(double degrees);
 
+  void shape(Shape shape, double shape_length);
+
   virtual ~Robot();
 private:
   CLinkbotI *mRobo;
   double mX, mY;
-  double mAngle
+  double mAngle;
 };
 
 // Defines methods
