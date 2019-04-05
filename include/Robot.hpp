@@ -3,7 +3,7 @@
 
 #include <linkbot.h>
 
-typedef enum {
+enum {
   TRIANGLE = 3,
   SQUARE,
   PENTAGON,
@@ -13,7 +13,7 @@ typedef enum {
   NONOGON,
   DECAGON,
   CIRCLE
-} Shape;
+};
 
 class Robot {
 public:
@@ -23,7 +23,7 @@ public:
   void moveto(double x, double y);
   void turn(double degrees);
 
-  void shape(Shape shape, double shape_length);
+  void move_shape(int kind_shape, double shape_length);
 
   virtual ~Robot();
 private:

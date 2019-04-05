@@ -39,11 +39,11 @@ void Robot::moveto(double x, double y)
   turn(-angle);
 }
 
-void Robot::shape(Shape shape, double side_length)
+void Robot::move_shape(int kind_shape, double side_length)
 {
   int i;
-  double angle = (360/shape);
-  for(i = 0; i < shape; i++)
+  double angle = (360/kind_shape);
+  for(i = 0; i < kind_shape; i++)
   {
     turn(angle);
     drive(side_length);
@@ -55,5 +55,5 @@ void Robot::turn(double degrees)
   mRobo->turnRight(degrees, 1.75, 3.69);
   mAngle+=degrees;
   if(mAngle >= 360)
-    mAngle %= 360;
+    mAngle -= 360;
 }
