@@ -33,6 +33,6 @@ private:
 };
 
 // Defines methods
-#include "Robot.inl"
+#include "robot.inl"
 
 #endif /* ROBOT_HPP */

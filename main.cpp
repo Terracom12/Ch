@@ -1,15 +1,12 @@
-#include "include/Robot.hpp"
-
-char *getInput();
+#include "include/robot.hpp"
 
 int main(int argc, char const *argv[]) {
   using namespace std;
-  Robot *ro = new Robot();
+  Robot *robot = new Robot();
 
-  ro->moveto(20,20);
-  ro->move_shape(SQUARE,-10.0);
+  #include "competitions/comp2.hpp"
 
-  delete ro;
+  delete robot;
 
   return 0;
 }
